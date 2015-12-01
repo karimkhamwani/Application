@@ -6,7 +6,6 @@ C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Deb
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.Main.resources
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.OrderDetails.resources
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.Properties.Resources.resources
-C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.UpdateEmployee.resources
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.csproj.GenerateResource.Cache
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\bin\Debug\FlamingoWF.exe.config
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\bin\Debug\FlamingoWF.exe
@@ -18,3 +17,8 @@ C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Deb
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.OrderDelivered.resources
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.DeleteItem.resources
 C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.AddNewOrder.resources
+C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.SearchByorderId.resources
+C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.ViewAttendence.resources
+C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.Feedback.resources
+C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.ForgetPassword.resources
+C:\Users\Karim\Documents\Visual Studio 2013\Projects\Flamingo\FlamingoWF\obj\Debug\FlamingoWF.AccountSettings.resources

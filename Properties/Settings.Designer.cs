@@ -65,5 +65,16 @@ namespace FlamingoWF.Properties {
                 return ((string)(this["WebsiteProjectFlamingoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KARIM-PC\\SQLEXPRESS;Initial Catalog=flamingoWindowsapplicationDb;Inte" +
+            "grated Security=True")]
+        public string flamingoWindowsapplicationDbConnectionString {
+            get {
+                return ((string)(this["flamingoWindowsapplicationDbConnectionString"]));
+            }
+        }
     }
 }

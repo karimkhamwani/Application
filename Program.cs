@@ -15,6 +15,13 @@ namespace FlamingoWF
             get { return ConnectionString; }
             set { value = ConnectionString; }
         }
+
+        private static string FlamingoDbstring;
+        public static string FCONSTR
+        {
+            get { return FlamingoDbstring; }
+            set { value = FlamingoDbstring; }
+        }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -28,7 +35,7 @@ namespace FlamingoWF
         }*/
         static void Main()
         {
-
+            FlamingoDbstring="Data Source=KARIM-PC\\SQLEXPRESS;Initial Catalog=flamingoWindowsapplicationDb;Integrated Security=True";
             ConnectionString = "Data Source=KARIM-PC\\SQLEXPRESS;Initial Catalog=WebsiteProjectFlamingo;Integrated Security=True";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

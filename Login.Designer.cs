@@ -33,15 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ForgetPasswordButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Login_password = new System.Windows.Forms.TextBox();
+            this.Login_username = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.s = new System.Windows.Forms.GroupBox();
+            this.Login_role = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CreateUserButton = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
@@ -98,27 +99,28 @@
             this.ForgetPasswordButton.TabIndex = 4;
             this.ForgetPasswordButton.Text = "ForgetPassword";
             this.ForgetPasswordButton.UseVisualStyleBackColor = false;
+            this.ForgetPasswordButton.Click += new System.EventHandler(this.ForgetPasswordButton_Click);
             // 
-            // textBox2
+            // Login_password
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Login_password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(177, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(234, 20);
-            this.textBox2.TabIndex = 3;
+            this.Login_password.Location = new System.Drawing.Point(177, 66);
+            this.Login_password.Name = "Login_password";
+            this.Login_password.PasswordChar = '*';
+            this.Login_password.Size = new System.Drawing.Size(234, 20);
+            this.Login_password.TabIndex = 3;
             // 
-            // textBox1
+            // Login_username
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Login_username.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(177, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Login_username.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Login_username.Location = new System.Drawing.Point(177, 31);
+            this.Login_username.Name = "Login_username";
+            this.Login_username.Size = new System.Drawing.Size(234, 20);
+            this.Login_username.TabIndex = 2;
+            this.Login_username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // LoginButton
             // 
@@ -162,30 +164,43 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Note :To Proceed Please Enter Username and Password";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.checkBox1.Location = new System.Drawing.Point(177, 103);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Remeber me";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // s
             // 
+            this.s.Controls.Add(this.Login_role);
+            this.s.Controls.Add(this.label5);
             this.s.Controls.Add(this.pictureBox1);
-            this.s.Controls.Add(this.checkBox1);
             this.s.Controls.Add(this.label1);
             this.s.Controls.Add(this.label2);
-            this.s.Controls.Add(this.textBox1);
-            this.s.Controls.Add(this.textBox2);
+            this.s.Controls.Add(this.Login_username);
+            this.s.Controls.Add(this.Login_password);
             this.s.Location = new System.Drawing.Point(68, 64);
             this.s.Name = "s";
             this.s.Size = new System.Drawing.Size(446, 151);
             this.s.TabIndex = 11;
             this.s.TabStop = false;
+            // 
+            // Login_role
+            // 
+            this.Login_role.FormattingEnabled = true;
+            this.Login_role.Items.AddRange(new object[] {
+            "Admin",
+            "Regular"});
+            this.Login_role.Location = new System.Drawing.Point(177, 99);
+            this.Login_role.Name = "Login_role";
+            this.Login_role.Size = new System.Drawing.Size(234, 21);
+            this.Login_role.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(116, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Role";
             // 
             // pictureBox1
             // 
@@ -210,6 +225,7 @@
             this.CreateUserButton.TabIndex = 12;
             this.CreateUserButton.Text = "Create New User";
             this.CreateUserButton.UseVisualStyleBackColor = false;
+            this.CreateUserButton.Click += new System.EventHandler(this.CreateUserButton_Click);
             // 
             // Login
             // 
@@ -226,6 +242,7 @@
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.ForgetPasswordButton);
             this.HelpButton = true;
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -245,16 +262,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ForgetPasswordButton;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Login_password;
+        private System.Windows.Forms.TextBox Login_username;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox s;
         private System.Windows.Forms.Button CreateUserButton;
+        private System.Windows.Forms.ComboBox Login_role;
+        private System.Windows.Forms.Label label5;
     }
 }

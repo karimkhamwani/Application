@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Orderdetails_area = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.Phonenumber = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
             this.Address = new System.Windows.Forms.TextBox();
@@ -57,20 +59,38 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.OrderDetails_status1 = new System.Windows.Forms.ComboBox();
+            this.status = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.Orderdetails_status = new System.Windows.Forms.ComboBox();
+            this.Orderin = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.flamingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.markAttendeceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewAttendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onlineOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderInPendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderDeliveredToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DimGray;
+            this.groupBox1.Controls.Add(this.Orderdetails_area);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.Phonenumber);
             this.groupBox1.Controls.Add(this.Email);
             this.groupBox1.Controls.Add(this.Address);
@@ -80,16 +100,34 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(12, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 331);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // Orderdetails_area
+            // 
+            this.Orderdetails_area.Enabled = false;
+            this.Orderdetails_area.Location = new System.Drawing.Point(110, 193);
+            this.Orderdetails_area.Name = "Orderdetails_area";
+            this.Orderdetails_area.Size = new System.Drawing.Size(120, 20);
+            this.Orderdetails_area.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label15.Location = new System.Drawing.Point(13, 193);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 13);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Area";
+            // 
             // Phonenumber
             // 
             this.Phonenumber.Enabled = false;
-            this.Phonenumber.Location = new System.Drawing.Point(110, 213);
+            this.Phonenumber.Location = new System.Drawing.Point(110, 228);
             this.Phonenumber.Name = "Phonenumber";
             this.Phonenumber.Size = new System.Drawing.Size(120, 20);
             this.Phonenumber.TabIndex = 8;
@@ -97,7 +135,7 @@
             // Email
             // 
             this.Email.Enabled = false;
-            this.Email.Location = new System.Drawing.Point(110, 266);
+            this.Email.Location = new System.Drawing.Point(110, 271);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(120, 20);
             this.Email.TabIndex = 7;
@@ -125,7 +163,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(10, 271);
+            this.label5.Location = new System.Drawing.Point(13, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 15);
             this.label5.TabIndex = 4;
@@ -136,7 +174,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(10, 215);
+            this.label4.Location = new System.Drawing.Point(10, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 15);
             this.label4.TabIndex = 3;
@@ -190,9 +228,9 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(321, 13);
+            this.groupBox2.Location = new System.Drawing.Point(317, 48);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(602, 496);
+            this.groupBox2.Size = new System.Drawing.Size(602, 484);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -318,7 +356,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(1114, 515);
+            this.button1.Location = new System.Drawing.Point(1114, 550);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 41);
             this.button1.TabIndex = 2;
@@ -331,7 +369,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(946, 515);
+            this.button2.Location = new System.Drawing.Point(946, 550);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 41);
             this.button2.TabIndex = 3;
@@ -343,7 +381,7 @@
             // 
             this.groupBox3.Controls.Add(this.OrderDetails_Comments);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(13, 369);
+            this.groupBox3.Location = new System.Drawing.Point(12, 392);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(275, 140);
             this.groupBox3.TabIndex = 4;
@@ -382,28 +420,28 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.OrderDetails_status1);
+            this.groupBox4.Controls.Add(this.status);
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.Orderdetails_status);
+            this.groupBox4.Controls.Add(this.Orderin);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Location = new System.Drawing.Point(946, 13);
+            this.groupBox4.Location = new System.Drawing.Point(946, 48);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(252, 496);
+            this.groupBox4.Size = new System.Drawing.Size(252, 484);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             // 
-            // OrderDetails_status1
+            // status
             // 
-            this.OrderDetails_status1.FormattingEnabled = true;
-            this.OrderDetails_status1.Items.AddRange(new object[] {
+            this.status.FormattingEnabled = true;
+            this.status.Items.AddRange(new object[] {
             "Accepted",
             "Rejected"});
-            this.OrderDetails_status1.Location = new System.Drawing.Point(115, 121);
-            this.OrderDetails_status1.Name = "OrderDetails_status1";
-            this.OrderDetails_status1.Size = new System.Drawing.Size(121, 21);
-            this.OrderDetails_status1.TabIndex = 16;
-            this.OrderDetails_status1.Text = "Select Status";
+            this.status.Location = new System.Drawing.Point(115, 121);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(121, 21);
+            this.status.TabIndex = 16;
+            this.status.Text = "Select Status";
             // 
             // label14
             // 
@@ -415,19 +453,19 @@
             this.label14.TabIndex = 15;
             this.label14.Text = "Status";
             // 
-            // Orderdetails_status
+            // Orderin
             // 
-            this.Orderdetails_status.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.Orderdetails_status.BackColor = System.Drawing.SystemColors.Control;
-            this.Orderdetails_status.FormattingEnabled = true;
-            this.Orderdetails_status.Items.AddRange(new object[] {
+            this.Orderin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.Orderin.BackColor = System.Drawing.SystemColors.Control;
+            this.Orderin.FormattingEnabled = true;
+            this.Orderin.Items.AddRange(new object[] {
             "Item Delivered",
             "Item in pending"});
-            this.Orderdetails_status.Location = new System.Drawing.Point(115, 66);
-            this.Orderdetails_status.Name = "Orderdetails_status";
-            this.Orderdetails_status.Size = new System.Drawing.Size(121, 21);
-            this.Orderdetails_status.TabIndex = 14;
-            this.Orderdetails_status.Text = "Select";
+            this.Orderin.Location = new System.Drawing.Point(115, 66);
+            this.Orderin.Name = "Orderin";
+            this.Orderin.Size = new System.Drawing.Size(121, 21);
+            this.Orderin.TabIndex = 14;
+            this.Orderin.Text = "Select";
             // 
             // label10
             // 
@@ -440,18 +478,141 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Order in";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.flamingoToolStripMenuItem,
+            this.staffToolStripMenuItem,
+            this.orderToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1210, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // flamingoToolStripMenuItem
+            // 
+            this.flamingoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenuToolStripMenuItem,
+            this.feedbackToolStripMenuItem});
+            this.flamingoToolStripMenuItem.Name = "flamingoToolStripMenuItem";
+            this.flamingoToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.flamingoToolStripMenuItem.Text = "Flamingo";
+            // 
+            // mainMenuToolStripMenuItem
+            // 
+            this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
+            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.mainMenuToolStripMenuItem.Text = "Main menu";
+            this.mainMenuToolStripMenuItem.Click += new System.EventHandler(this.mainMenuToolStripMenuItem_Click);
+            // 
+            // feedbackToolStripMenuItem
+            // 
+            this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.feedbackToolStripMenuItem.Text = "Feedback";
+            this.feedbackToolStripMenuItem.Click += new System.EventHandler(this.feedbackToolStripMenuItem_Click);
+            // 
+            // staffToolStripMenuItem
+            // 
+            this.staffToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeeToolStripMenuItem,
+            this.attendenceToolStripMenuItem});
+            this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.staffToolStripMenuItem.Text = "Staff";
+            // 
+            // employeeToolStripMenuItem
+            // 
+            this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addEmployeeToolStripMenuItem,
+            this.deleteEmployeeToolStripMenuItem});
+            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.employeeToolStripMenuItem.Text = "Employee";
+            // 
+            // addEmployeeToolStripMenuItem
+            // 
+            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
+            // 
+            // deleteEmployeeToolStripMenuItem
+            // 
+            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
+            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
+            // 
+            // attendenceToolStripMenuItem
+            // 
+            this.attendenceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.markAttendeceToolStripMenuItem,
+            this.viewAttendenceToolStripMenuItem});
+            this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.attendenceToolStripMenuItem.Text = "Attendence";
+            // 
+            // markAttendeceToolStripMenuItem
+            // 
+            this.markAttendeceToolStripMenuItem.Name = "markAttendeceToolStripMenuItem";
+            this.markAttendeceToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.markAttendeceToolStripMenuItem.Text = "Mark Attendence";
+            this.markAttendeceToolStripMenuItem.Click += new System.EventHandler(this.markAttendeceToolStripMenuItem_Click);
+            // 
+            // viewAttendenceToolStripMenuItem
+            // 
+            this.viewAttendenceToolStripMenuItem.Name = "viewAttendenceToolStripMenuItem";
+            this.viewAttendenceToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.viewAttendenceToolStripMenuItem.Text = "View Attendence";
+            this.viewAttendenceToolStripMenuItem.Click += new System.EventHandler(this.viewAttendenceToolStripMenuItem_Click);
+            // 
+            // orderToolStripMenuItem
+            // 
+            this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onlineOrderToolStripMenuItem});
+            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.orderToolStripMenuItem.Text = "Order";
+            // 
+            // onlineOrderToolStripMenuItem
+            // 
+            this.onlineOrderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.orderInPendingToolStripMenuItem,
+            this.orderDeliveredToolStripMenuItem});
+            this.onlineOrderToolStripMenuItem.Name = "onlineOrderToolStripMenuItem";
+            this.onlineOrderToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.onlineOrderToolStripMenuItem.Text = "Online Order";
+            // 
+            // orderInPendingToolStripMenuItem
+            // 
+            this.orderInPendingToolStripMenuItem.Name = "orderInPendingToolStripMenuItem";
+            this.orderInPendingToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.orderInPendingToolStripMenuItem.Text = "Order in Pending";
+            this.orderInPendingToolStripMenuItem.Click += new System.EventHandler(this.orderInPendingToolStripMenuItem_Click);
+            // 
+            // orderDeliveredToolStripMenuItem
+            // 
+            this.orderDeliveredToolStripMenuItem.Name = "orderDeliveredToolStripMenuItem";
+            this.orderDeliveredToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.orderDeliveredToolStripMenuItem.Text = "Order Delivered";
+            this.orderDeliveredToolStripMenuItem.Click += new System.EventHandler(this.orderDeliveredToolStripMenuItem_Click);
+            // 
             // OrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1210, 568);
+            this.ClientSize = new System.Drawing.Size(1210, 616);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "OrderDetails";
             this.Load += new System.EventHandler(this.OrderDetails_Load);
             this.groupBox1.ResumeLayout(false);
@@ -463,7 +624,10 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -495,12 +659,29 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox OrderDetails_status1;
+        private System.Windows.Forms.ComboBox status;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox Orderdetails_status;
+        private System.Windows.Forms.ComboBox Orderin;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.TextBox Phonenumber;
         private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem flamingoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem attendenceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem markAttendeceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewAttendenceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem onlineOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderInPendingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderDeliveredToolStripMenuItem;
+        private System.Windows.Forms.TextBox Orderdetails_area;
+        private System.Windows.Forms.Label label15;
     }
 }

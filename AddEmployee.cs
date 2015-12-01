@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace FlamingoWF
 {
     public partial class AddEmployee : Form
@@ -17,20 +17,7 @@ namespace FlamingoWF
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -41,7 +28,26 @@ namespace FlamingoWF
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            addEmployee();
+        }
+        public void addEmployee()//add new employee to database
+        {
+            try { 
+            SqlConnection con = new SqlConnection(Program.FCONSTR);
+            con.Open();
+            //string query = "INSERT INTO TIMINGS(Id, CheckInTime, CheckOutTime, Date) 
+            //Values (" + teacherId.Text + ",'" + varCheckIn + "','" + varCheckOut + "','" + date.Text + "')";
+            string query = "Insert into Employee(EmployeeName,EmployeePhonenumber,EmployeeNic,EmployeeAddress,EmployeeAge,EmployeeDateofJoining ) Values ('" + AddEmployee_name.Text + "' ,'"+AddEmployee_Phonenumber.Text+"' , '"+AddEmployee_NIC.Text+"' ,'"+AddEmployee_Address.Text+"' , '"+AddEmployee_age.Value+"' , '"+AddEmployee_Dateofjoining.Value+"')";
+       
+            SqlCommand sc = new SqlCommand(query, con);
+            sc.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Added Sucessfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void AddEmployee_Load(object sender, EventArgs e)

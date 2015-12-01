@@ -42,6 +42,7 @@ namespace FlamingoWF
 
         public void FetchingOrderDetailid(int ORDERID)
         {
+            int count = 0;
 
             SqlConnection con = new SqlConnection(Program.CONSTR);
             con.Open();
@@ -55,39 +56,39 @@ namespace FlamingoWF
                 while (sd.Read())
                 {
                     string temp = sd.GetInt32(0).ToString() ;
-                    DeleteItemFromOrderlist(temp);
-                                  
-                            } 
+                
+                    try
+                    {
+                        if (temp == Deleteitem_EnterId.Text)
+                        {
+                            SqlConnection con1 = new SqlConnection(Program.CONSTR);
+                            con1.Open();
+                            string query1 = "DELETE from OrderDetails where OrderDetails.OrderDetailId=" + temp;
+                            SqlCommand sc1 = new SqlCommand(query1, con1);
+                            sc1.ExecuteNonQuery();
+                            con1.Close();
+                            MessageBox.Show("Delete Sucuessfully");
+                            count = 1;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+
+
+                } 
 
             }
+            if (count == 0)
+            {
+                MessageBox.Show("Order detail id invalid");
+            } 
             sd.Close();
             con.Close();
         }
 
-        public void DeleteItemFromOrderlist(string tem)
-        {
-            try
-            {
-                if (tem == Deleteitem_EnterId.Text)
-                {
-                    SqlConnection con1 = new SqlConnection(Program.CONSTR);
-                    con1.Open();
-                    string query1 = "DELETE from OrderDetails where OrderDetails.OrderDetailId=" + tem;
-                    SqlCommand sc1 = new SqlCommand(query1, con1);
-                    sc1.ExecuteNonQuery();
-                    con1.Close();
-                    MessageBox.Show("Delete Sucuessfully");
-
-
-                }
-             
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
